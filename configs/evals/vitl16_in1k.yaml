@@ -30,5 +30,5 @@ pretrain:
   tight_silu: false
   patch_size: 16
   folder: /content/drive/MyDrive/
-  checkpoint: in1k-probe.pth.tar
+  checkpoint: vitl16.pth.tar
   write_tag: jepa
