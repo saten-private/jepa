@@ -198,7 +198,10 @@ def main(args_eval, resume_preempt=False):
         warmup=warmup,
         num_epochs=num_epochs,
         use_bfloat16=use_bfloat16)
-    classifier = DistributedDataParallel(classifier, static_graph=True)
+    # Corrected due to the following error
+    # ValueError: Default process group has not been initialized, please make sure to call init_process_group
+    # https://github.com/facebookresearch/jepa/issues/55
+    # classifier = DistributedDataParallel(classifier, static_graph=True)
 
     # -- load training checkpoint
     start_epoch = 0
