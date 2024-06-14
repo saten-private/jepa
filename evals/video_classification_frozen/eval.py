@@ -129,7 +129,7 @@ def main(args_eval, resume_preempt=False):
         device = torch.device('cuda:0')
         torch.cuda.set_device(device)
 
-    world_size, rank = init_distributed(port=12321, rank_and_world_size=(0, 1))
+    world_size, rank = init_distributed()
     logger.info(f'Initialized (rank/world-size) {rank}/{world_size}')
 
     # -- log/checkpointing paths
