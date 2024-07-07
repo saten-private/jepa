@@ -4,7 +4,7 @@ tag: in1k-16f
 eval_name: image_classification_frozen
 resume_checkpoint: false
 data:
-  root_path: /content/drive/MyDrive/jepa_images/
+  root_path: ~/content/drive/MyDrive/jepa_images/
   image_folder: imagenet_full_size/061417/
   num_classes: 1
   resolution: 224
@@ -29,6 +29,6 @@ pretrain:
   use_silu: false
   tight_silu: false
   patch_size: 16
-  folder: /content/drive/MyDrive/
+  folder: ~/content/drive/MyDrive/
   checkpoint: vitl16.pth.tar
   write_tag: jepa
