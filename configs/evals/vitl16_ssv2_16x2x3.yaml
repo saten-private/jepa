@@ -4,8 +4,8 @@ tag: ssv2-16x2x3
 eval_name: video_classification_frozen
 resume_checkpoint: false
 data:
-  dataset_train: /content/drive/MyDrive/jepa_videos_train-ssv2_16x2x3.csv
-  dataset_val: /content/drive/MyDrive/jepa_videos_val-ssv2_16x2x3.csv
+  dataset_train: /opt/ml/code/MyDrive/jepa_videos_train-ssv2_16x2x3.csv
+  dataset_val: /opt/ml/code/MyDrive/jepa_videos_val-ssv2_16x2x3.csv
   dataset_type: VideoDataset
   num_classes: 1
   frames_per_clip: 20
@@ -34,6 +34,6 @@ pretrain:
   tight_silu: false
   use_sdpa: true
   patch_size: 16
-  folder: /content/drive/MyDrive/
+  folder: /opt/ml/code/MyDrive/
   checkpoint: vitl16.pth.tar
   write_tag: jepa
