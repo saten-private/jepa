@@ -231,7 +231,8 @@ def main(args_eval, resume_preempt=False):
     # Corrected due to the following error
     # ValueError: Default process group has not been initialized, please make sure to call init_process_group
     # https://github.com/facebookresearch/jepa/issues/55
-    # classifier = DistributedDataParallel(classifier, static_graph=True)
+    # I put it back in an environment with a GPU and it no longer causes errors.
+    classifier = DistributedDataParallel(classifier, static_graph=True)
 
     # -- load training checkpoint
     start_epoch = 0
